@@ -23,7 +23,7 @@ public class ProductController {
 	}
 
 	//funcionando
-	@GetMapping("/")
+	@GetMapping("")
 	public String apiWorking() {
 		return "RN Challenge 20220523 Running";
 	}
