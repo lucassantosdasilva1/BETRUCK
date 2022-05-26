@@ -1,10 +1,10 @@
 package com.betruck.api.repositories;
 
-import com.betruck.api.model.Product;
+import com.betruck.api.model.ProductModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ClienteRepository extends JpaRepository<Product, Long> {
+public interface ProductRepository extends JpaRepository<ProductModel, Long> {
 
 }
