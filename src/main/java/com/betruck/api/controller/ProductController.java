@@ -43,14 +43,9 @@ public class ProductController {
 
 		ProductModel productToSave = productModelOptional.get();
 
-		productToSave.setDescription(product.getDescription());
-		productToSave.setFilename(product.getFilename());
 		productToSave.setPrice(product.getPrice());
-		productToSave.setRating(product.getRating());
 		productToSave.setTitle(product.getTitle());
 		productToSave.setType(product.getType());
-		productToSave.setWidth(product.getWidth());
-		productToSave.setHeight(product.getHeight());
 
 		productRepository.save(productToSave);
 		return productToSave;
