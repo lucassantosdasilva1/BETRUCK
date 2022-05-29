@@ -70,6 +70,7 @@ public class ProductController {
 
 	@PostMapping("/products/save")
 	public ProductModel save(@RequestBody ProductModel product) {
+
 		return productRepository.save(product);
 	}
 
