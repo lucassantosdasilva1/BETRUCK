@@ -51,17 +51,15 @@ public class ProductController {
 		return productToSave;
 	}
 
-	//FUNCIONANDO
 	@DeleteMapping("/products/{id}")
-	public ResponseEntity<Long> delete(@PathVariable("id") Long id){
-		return new ResponseEntity<>(id, HttpStatus.OK);
+	public ResponseEntity<String> deleteById(@PathVariable("id") Long id) {
+		return productRepository.findById(id)
+				.map(record -> {
+					productRepository.deleteById(id);
+					return ResponseEntity.ok().build();
+				}).orElse(ResponseEntity.notFound().build());
 	}
 
-	//-----------------------------------------------------
-	//TEM QUE SER DELETADO o post
-	//TEM QUE POPULAR O BANCO
-	//RETIRAR O AUTOWIRED
-	//RETIRAR O LOMBOCK
 
 	@PostMapping("/products/save")
 	public ProductModel save(@RequestBody ProductModel product) {
