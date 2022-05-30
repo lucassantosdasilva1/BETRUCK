@@ -56,7 +56,7 @@ public class ProductController {
 		return productRepository.findById(id)
 				.map(record -> {
 					productRepository.deleteById(id);
-					return ResponseEntity.ok().build();
+					return new ResponseEntity<>(id, HttpStatus.OK);
 				}).orElse(ResponseEntity.notFound().build());
 	}
 
