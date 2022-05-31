@@ -1,8 +1,12 @@
 package com.betruck.api.model;
 
 import lombok.Data;
+import org.hibernate.annotations.ColumnDefault;
+import org.hibernate.annotations.Generated;
+import org.hibernate.annotations.GenerationTime;
 
 import javax.persistence.*;
+import java.util.Date;
 
 
 @Data
@@ -37,4 +41,9 @@ public class ProductModel {
 
     @Column(nullable = false)
     private int rating;
+
+    @Temporal( value = TemporalType.TIMESTAMP )
+    @Generated( value = GenerationTime.INSERT )
+    @Column( columnDefinition = "datetime(6) default NOW(6)", nullable = false)
+    private Date created_at;
 }

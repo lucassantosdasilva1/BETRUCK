@@ -16,19 +16,19 @@ public class ProductController {
 	@Autowired
 	private ProductRepository productRepository;
 
-	//funcionando
+	//List all of products
 	@GetMapping("/products")
 	public List<ProductModel> listProducts() {
 		return productRepository.findAll();
 	}
 
-	//funcionando
+	//It is Api Welcome
 	@GetMapping("")
 	public String apiWorking() {
-		return "RN Challenge 20220523 Running";
+		return "RN Challenge 20220523 Running. Hello!";
 	}
 
-	//funcionando
+	//List product by ID
 	@GetMapping("products/{id}")
 	public ResponseEntity<ProductModel> productConsult(@PathVariable("id") Long id) {
 		return productRepository.findById(id)
@@ -36,7 +36,7 @@ public class ProductController {
 				.orElse(ResponseEntity.notFound().build());
 	}
 
-	//FUNCIONANDO
+	//Edit product by ID
 	@PutMapping("/products/{id}")
 	public ProductModel updateById(@RequestBody ProductModel product, @PathVariable("id") Long id) {
 		Optional<ProductModel> productModelOptional = productRepository.findById(id);
@@ -51,6 +51,7 @@ public class ProductController {
 		return productToSave;
 	}
 
+	//Delete product by ID
 	@DeleteMapping("/products/{id}")
 	public ResponseEntity<Long> deleteById(@PathVariable("id") Long id) {
 		return productRepository.findById(id)
@@ -60,7 +61,7 @@ public class ProductController {
 				}).orElse(ResponseEntity.notFound().build());
 	}
 
-
+	//Save new Product
 	@PostMapping("/products/save")
 	public ProductModel save(@RequestBody ProductModel product) {
 
