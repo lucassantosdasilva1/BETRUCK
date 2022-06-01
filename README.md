@@ -1,121 +1,117 @@
-# React Native Challenge 20200810
 
-### Obrigatório
+
+  
  
-- Leia atentamente todo o descritivo desse documento antes de qualquer coisa;
-- Trabalhar em um FORK deste repositório em seu usuário;
-- O aplicativo deve utilizar React Native superior a versão 0.50;
-- O projeto back-end deverá ser desenvolvido em Java + Spring;
-- O Front-End deve utilizar [Native Base](https://github.com/GeekyAnts/NativeBase) ou [UI Kitten](https://github.com/akveo/react-native-ui-kitten);
-- Os produtos disponíveis no projeto da aplicação devem ser recuperados através da Rest WebAPI desenvolvida em Java + Spring;
-- Utilize sempre boas práticas nas implementações. OOP, SOLID, DDD, Clean Code, Injeção de Dependência são sempre bem-vindos e fazem toda diferença!!!
+</p>
+<h1 align="center">
+	React Native Challenge 20200810
+</h1>
+
+<h4 align="center"> 
+	🚧  API + Mobile ♻️ Concluído 🚀 🚧
+</h4>
+
+<p align="center">
+ <a href="#-sobre-o-projeto">Sobre</a> •
+ <a href="#-funcionalidades">Funcionalidades</a> •
+ <a href="#-como-executar-o-projeto">Como executar</a> • 
+ <a href="#-tecnologias">Tecnologias</a> • 
+ <a href="#-autor">Autor</a> • 
+ <a href="#user-content--licença">Licença</a>
+</p>
 
 
-## API / Back-End Java + Spring
- 
-###  Base de Dados
- 
-- Criar um banco de dados MySQL no Heroku: https://elements.heroku.com/addons/jawsdb
+## 💻 Sobre o projeto
 
-- Utilizar Migrations
-        
-- Utilizar Repository Pattern
-        
-### Endpoints
-        
-- Criar uma API REST usando Java com os seguintes endpoints:
-    
-        `GET /`: Retornar um Status: 200 e uma Mensagem "RN Challenge 20200810 Running"
-        `PUT /products/:productId`: Será responsável por receber atualizações realizadas no Projeto Web
-        `DELETE /products/:productId`: Remover o produto da base
-        `GET /products/:productId`: Obter a informação somente de um produto da base de dados
-        `GET /products`: Listar todos os produtos da base de dados
-        
-- Integrar a API com o banco de dados MySQL criado no Heroku para persistir os dados
-
-- Processar os produtos do arquivo [products.json](products.json) para termos dados para editar e excluir durante os testes 
-
-- Até o momento, os Endpoints estão todos abertos para acesso. Isso não é legal a nível de segurança, dessa forma, queremos que você use um esquema para bloquear qualquer tipo de acesso, configurando
-uma **API Key** para que somente possa acessar os Endpoints, "Requests" autorizadas;
-
-> Dica: Talvez o endpoint de Hello precisa estar público.
+♻️ O aplicativo tras uma forma fácil de conhecer variados tipos de alimentos.
 
 
-### Documentação
+Projeto desenvolvido durante a avaliação para o teste de Desenvolvedor React Native para **BETRUCK** oferecido pela [Coodesh](https://coodesh.com).
 
-Escrever a documentação da API utlizando conceito [OpenAPI Specification](https://github.com/OAI/OpenAPI-Specification), utilizar versões superiores ao v2.0
+---
 
-### Extras
+## ⚙️ Funcionalidades
 
-- **Diferencial 1 -** Executar o projeto usando Docker
-- **Diferencial 2 -** Escrever o esquema de segurança aplicado nos endpoints 
+- [x] Conhecer mais sobre variedades alimentícias
+- [x] Imagens Reais dos alimentos
+- [x] Editar os Produtos
+- [x] Deletar os produtos
 
-## Aplicação React Native
- 
-![<img src="assets/images/home.png" height="500" alt="Home" title="Home"/>](assets/images/home.png)
-
-#### Listar produtos
- 
-Criar uma sessão na tela com uma lista de os produtos processados pela API. É importante ter os seguintes campos:
- 
-        - Foto
-        - Title
-        - Type
-        - Rating
-        - Price
-        - Created (Data do upload do produto a nova base de datos)
-        - Actions (Botões Editar e Excluir)
- 
-#### Editar produto
- 
-Na tabela com os produtos precisamos disponibilizar os formulários com todos os campos dos produtos para que a equipe possa editá-los. 
-Fazer validação de alguns campos obrigatórios:
-
-        - Title
-        - Type
-        - Price
- 
-#### Remover produto
- 
-Antes de completar a ação de remover produto, devemos perguntar ao usuário se ele realmente 
-quer realizar a ação. Para evitar a remoção de produtos de maneira indesejada. Após remover com êxito, notificar o usuário com um alerta de sucesso. 
-
-#### Unit Testing
- 
-**Diferencial 1** - Utilizar Unit Test no front-end para a opção de `Remover produto`. 
-
-**Diferencial 2** - Utilizar Unit Test para revisar se está listando produtos 
-
-### Documentação
-
-#### Publicar
-
-Utilizar o [Expo](https://expo.io/) para disponibilizar a aplicação nas duas versões Android e iOS.
-
-## Readme do Repositório
- 
-- Deve conter o título de cada projeto
-- Uma descrição de uma frase
-- Como instalar e usar o projeto (instruções)
-- Não esqueça o [.gitignore](https://www.toptal.com/developers/gitignore)
-- Link do Expo do Projeto publicado e links de downloads para iOS e Android
- 
-## Finalização 
-
-Avisar sobre a finalização e enviar para correção em: [https://coodesh.com/review-challenge](https://coodesh.com/review-challenge) 
-
-Após essa etapa será marcado a apresentação/correção do projeto.
-
-## Instruções para a Apresentação: 
-
-1. Será necessário compartilhar a tela durante a vídeo chamada;
-2. Deixe todos os projetos de solução previamente abertos em seu computador antes de iniciar a chamada;
-3. Deixe os ambientes configurados e prontos para rodar; 
-4. Prepara-se pois você será questionado sobre cada etapa e decisão do Challenge;
-5. Prepare uma lista de perguntas, dúvidas, sugestões de melhorias e feedbacks (caso tenha).
+- [x] Os usuários tem acesso ao aplicativo móvel, onde podem:
+  - [x] Consultar produtos
+  - [x] Editar
+  - [x] Apagar
 
 
-## Suporte
+## 🚀 Como executar o projeto
 
-Use o nosso canal no slack: http://bit.ly/32CuOMy para tirar dúvidas sobre o processo ou envie um e-mail para contato@coodesh.com. 
+Este projeto é divido em duas partes:
+1. Backend (pasta server) 
+2. [Mobile](https://github.com/lucassantosdasilva1/BeTruckApp) ([link](https://github.com/lucassantosdasilva1/BeTruckApp)do github)
 
+💡O Mobile precisa que o Backend esteja sendo executado para funcionar (No nosso caso está hospedado no heroku e não precisará se incomodar).
+
+### Pré-requisitos
+
+Antes de começar, você vai precisar ter instalado e acessar a playstore pára baixar o expo go. 
+
+
+#### 🎲 Utilizando o Backend (servidor)
+
+O servidor está hospedado no Heroku pode ser acessado clicando [aqui](https://api-betruck.herokuapp.com/)
+
+A [Documentação da API](https://api-betruck.herokuapp.com/swagger-ui.html) foi produzida utlizando conceito [OpenAPI Specification](https://github.com/OAI/OpenAPI-Specification) na sua mais nova versão [(v3)](https://github.com/OAI/OpenAPI-Specification)
+
+
+#### 🧭 Rodando a aplicação Mobile 
+- Acessar o [link](https://expo.dev/@lucassantosdasilva1/BETRUCKAPP) expo e visualizar o QRcode do app online. 
+
+- Após ler o QRcode ele vai abrir automaticamente o expo go em seu smartphone com o app em funcionamento
+
+
+## 🛠 Tecnologias
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+#### **Server**  ([Spring](https://spring.io/projects/spring-framework)  +  [Java](https://docs.oracle.com/en/java/))
+
+-   **JPA**
+-   **Hibernate**
+-   **Lombok**
+-   **OpenAPI**
+-   **MySQL Conector**
+
+> Veja o arquivo  pom.xml
+
+#### **Mobile**  ([React Native](http://www.reactnative.com/)  +  [TypeScript](https://www.typescriptlang.org/))
+
+-   **[Expo](https://expo.io/)**
+-    **[Styled Components](https://www.styled-components.com)**
+-   **[Expo Google Fonts](https://github.com/expo/google-fonts)**
+-   **[React Native Gesture Handler](https://)**
+-   **[React Native Responsive Fontsize](https://)**
+-   **[Axios](https://github.com/axios/axios)**
+
+> Veja o arquivo  [package.json](https://)
+
+#### [](https://github.com/tgmarinho/Ecoleta#utilit%C3%A1rios)**Utilitários**
+-   Editor:  **[Visual Studio Code](https://code.visualstudio.com/)** 
+-   Markdown:  **[StackEdit](https://stackedit.io/)**,  **[Markdown Emoji](https://gist.github.com/rxaviers/7360908)**
+
+-   Consultas e DBA: **[BeeKeeper Studio](https://www.beekeeperstudio.io)**
+-   Teste de API:  **[Insomnia](https://insomnia.rest/)**
+-   Ícones:  **[Feather Icons](https://feathericons.com/)**,  **[Font Awesome](https://fontawesome.com/)**
+-   Fontes:  **[Ubuntu](https://fonts.google.com/specimen/Ubuntu)**,  **[Roboto](https://fonts.google.com/specimen/Roboto)**
+
+
+---
+
+---
+
+## 📝 Licença
+
+Este projeto esta sobe a licença [MIT](./LICENSE).
+
+Feito com ❤️ por Lucas Santos 👋🏽 [Entre em contato!](https://www.linkedin.com/in/lucas-santos-758084112)
+
+---
